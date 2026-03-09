@@ -275,11 +275,13 @@ ul {
 }
 
 .logo a {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--clr-white); /* White in dark header */
-    letter-spacing: -0.02em;
+    display: inline-flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 32px;
+    width: auto;
 }
 
 .header-badge {
@@ -841,8 +843,23 @@ ul {
 }
 
 /* ==========================================================================
-   8. Technical Proof
+   8. Technical Proof & Integrations
    ========================================================================== */
+.integrations-visual {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.integrations-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+}
+
 .tech-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1094,10 +1111,10 @@ ul {
     padding-bottom: 60px;
 }
 
-.logo-text {
-    font-family: var(--font-heading);
-    color: var(--clr-white);
-    letter-spacing: -0.02em;
+.footer-logo {
+    height: 40px;
+    width: auto;
+    margin-bottom: 1.5rem;
 }
 
 .footer-brand h3 {
@@ -1216,6 +1233,12 @@ ul {
     margin-bottom: 0.5rem;
 }
 
+.modal-logo {
+    height: 48px;
+    width: auto;
+    margin-bottom: 2rem;
+}
+
 .dark-modal .modal-sub {
     color: rgba(255, 255, 255, 0.6);
 }
@@ -1247,7 +1270,7 @@ label {
 .dark-form input, 
 .dark-form select, 
 .dark-form textarea {
-    background: var(--clr-bg-dark);
+    background-color: var(--clr-bg-dark);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--clr-white);
 }
@@ -1340,6 +1363,10 @@ textarea {
 /* ==========================================================================
    Responsive Design
    ========================================================================== */
+.mobile-only {
+    display: none !important;
+}
+
 @media (max-width: 1024px) {
     .hero-grid {
         grid-template-columns: 1fr;
@@ -1367,7 +1394,19 @@ textarea {
     .desktop-only {
         display: none !important;
     }
+    .mobile-only {
+        display: inline-block !important;
+    }
     
+    .header-logo {
+        height: 24px;
+    }
+    
+    .site-header .btn {
+        padding: 8px 16px;
+        font-size: 0.875rem;
+    }
+
     .hero {
         padding-top: 120px;
     }

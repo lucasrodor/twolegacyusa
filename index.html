@@ -15,7 +15,7 @@
     <header id="main-header" class="site-header">
         <div class="container header-inner">
             <div class="logo">
-                <a href="#">TwoLegacy Company</a>
+                <a href="#"><img src="assets/logo.png" alt="TwoLegacy Company Logo" class="header-logo"></a>
             </div>
             
             <div class="header-badge desktop-only">
@@ -23,9 +23,12 @@
             </div>
 
             <div class="header-actions">
-                <a href="tel:+10000000000" class="phone-link desktop-only"><i class="fa-solid fa-phone"></i> (800) 123-4567</a>
-                <button class="btn btn-outline cta-trigger">Talk to a Specialist</button>
-                <button class="btn btn-primary cta-trigger">Free Strategic Audit</button>
+                <a href="tel:+18001234567" class="phone-link desktop-only"><i class="fa-solid fa-phone"></i> (800) 123-4567</a>
+                <button class="btn btn-outline desktop-only" onclick="openModal()">Talk to a Specialist</button>
+                <button class="btn btn-primary cta-trigger">
+                    <span class="desktop-only">Free Strategic Audit</span>
+                    <span class="mobile-only">Free Audit</span>
+                </button>
             </div>
         </div>
     </header>
@@ -261,8 +264,23 @@
             </div>
         </section>
 
-        <!-- RED DIVIDER -->
+        <!-- GUARANTEE DIVIDER -->
         <div class="section-divider section-divider-light"></div>
+        
+        <!-- INTEGRATIONS SECTION (NEW) -->
+        <section id="integrations" class="integrations-section section-spacing dark-section text-center">
+            <div class="container fade-up">
+                <span class="section-kicker">Multi-Channel Ecosystem</span>
+                <h2 class="section-title">Seamlessly connected to where your guests book</h2>
+                <p class="hero-sub" style="margin: 0 auto 3rem auto;">We integrate and optimize campaigns across the entire hospitality digital landscape to capture demand at every touchpoint.</p>
+                <div class="integrations-visual">
+                    <img src="assets/integrations.png" alt="Hospitality Integrations Dashboard" class="integrations-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- RED DIVIDER -->
+        <div class="section-divider section-divider-dark"></div>
 
         <!-- TECHNICAL PROOF -->
         <section id="tech-proof" class="tech-proof-section section-spacing dark-section">
@@ -403,7 +421,7 @@
     <footer class="site-footer bg-dark footer-bordered">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <h3 class="logo-text">TwoLegacy Company</h3>
+                <img src="assets/logo.png" alt="TwoLegacy Company Logo" class="footer-logo">
                 <p>Strategic structure exclusively for the hospitality industry.</p>
             </div>
             
@@ -438,7 +456,8 @@
             <button class="modal-close" aria-label="Close modal">&times;</button>
             
             <div class="modal-content" id="form-content">
-                <h2 class="modal-title logo-text">Let's build your direct booking strategy</h2>
+                <img src="assets/logo.png" alt="TwoLegacy Company Logo" class="modal-logo">
+                <h2 class="modal-title">Let's build your direct booking strategy</h2>
                 <p class="modal-sub">Fill out the form and a specialist will reach out within 24 hours.</p>
                 
                 <form id="audit-form" class="audit-form dark-form">
@@ -495,7 +514,7 @@
             
             <div class="modal-success" id="success-content" style="display: none;">
                 <div class="success-icon dark-success-icon"><i class="fa-solid fa-circle-check"></i></div>
-                <h2 class="logo-text">Thank you!</h2>
+                <h2>Thank you!</h2>
                 <p>We've received your request. A hospitality specialist will be in touch within 24 hours.</p>
                 <button class="btn btn-outline btn-outline-white" id="success-close">Return to Site</button>
             </div>
